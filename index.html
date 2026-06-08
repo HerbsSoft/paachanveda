@@ -324,7 +324,7 @@ window.addEventListener('scroll',()=>{const e=document.documentElement;$('sp').s
 document.querySelectorAll('.fq-q').forEach(q=>q.onclick=()=>{const p=q.parentElement,o=p.classList.contains('open');document.querySelectorAll('.fq').forEach(f=>f.classList.remove('open'));if(!o)p.classList.add('open')});
 const cO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.st-n').forEach(n=>{const t=+n.dataset.t,dur=1600;let c=0;const i=t/(dur/16),ti=setInterval(()=>{c+=i;if(c>=t){n.textContent=t>=1e3?t.toLocaleString():t;clearInterval(ti)}else n.textContent=Math.floor(c).toLocaleString()},16)});cO.unobserve(e.target)}})},{threshold:.3});const rs=document.querySelector('.sec-stats');if(rs)cO.observe(rs);
 // 🔧 PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL BELOW (between the quotes):
-const SU='YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+const SU='https://script.google.com/macros/s/AKfycbylFsik5II_rBr88ByE0UfxjcQb6_Y1C0GhwDGfak-Q7YoRsWcJRFNaVw5dv60KUu9rBg/exec';
 
 $('lf').onsubmit=function(ev){
 ev.preventDefault();
