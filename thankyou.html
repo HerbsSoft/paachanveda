@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="hi"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+<title>धन्यवाद! — VedaVital PachanVeda GutBalance</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--g:#15803d;--gd:#166534;--gl:#dcfce7;--gold:#d97706;--r:#dc2626;--dk:#111827;--md:#4b5563;--cream:#fefcf5}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans Devanagari',sans-serif;background:var(--cream);color:var(--dk);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+.nav{background:#fff;border-bottom:1px solid #e5e7eb;padding:12px 16px;display:flex;align-items:center;justify-content:center}
+.nav-brand{font-size:20px;font-weight:900;color:var(--gd)}
+.nav-brand b{color:var(--gold)}
+
+/* HERO */
+.ty-hero{flex:1;display:flex;align-items:center;justify-content:center;padding:30px 16px;position:relative;overflow:hidden}
+.ty-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:350px;height:350px;background:radial-gradient(circle,rgba(21,128,61,.06),transparent);border-radius:50%}
+.ty-hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:300px;height:300px;background:radial-gradient(circle,rgba(217,119,6,.06),transparent);border-radius:50%}
+.ty-card{max-width:580px;width:100%;text-align:center;position:relative;z-index:1}
+
+/* CONFETTI */
+.confetti{position:absolute;top:0;left:0;right:0;height:200px;pointer-events:none;overflow:hidden;z-index:0}
+.confetti i{position:absolute;width:8px;height:8px;border-radius:2px;opacity:.8;animation:confettiFall linear infinite}
+@keyframes confettiFall{0%{transform:translateY(-20px) rotate(0deg);opacity:1}100%{transform:translateY(200px) rotate(720deg);opacity:0}}
+
+/* SUCCESS ICON */
+.success-icon{width:90px;height:90px;border-radius:50%;background:var(--gl);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;position:relative;animation:iconPop .5s ease}
+@keyframes iconPop{0%{transform:scale(0)}50%{transform:scale(1.15)}100%{transform:scale(1)}}
+.success-icon::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:3px solid var(--g);opacity:.3;animation:ringPulse 2s infinite}
+@keyframes ringPulse{0%,100%{transform:scale(1);opacity:.3}50%{transform:scale(1.15);opacity:0}}
+.success-icon svg{width:44px;height:44px;fill:var(--g);animation:checkDraw .6s ease .2s both}
+@keyframes checkDraw{0%{opacity:0;transform:scale(0) rotate(-45deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+
+/* TEXT */
+.ty-emoji{font-size:40px;margin-bottom:8px;animation:bounceIn .6s ease}
+@keyframes bounceIn{0%{transform:scale(0)}60%{transform:scale(1.2)}100%{transform:scale(1)}}
+.ty-h{font-size:clamp(24px,5vw,32px);font-weight:900;color:var(--gd);margin-bottom:4px;line-height:1.2}
+.ty-name{font-size:clamp(18px,4vw,24px);font-weight:800;color:var(--gold);margin-bottom:14px}
+.ty-p{font-size:15px;color:var(--md);line-height:1.65;margin-bottom:20px}
+.ty-p strong{color:var(--dk)}
+
+/* STEPS BOX */
+.steps-box{background:#fff;border-radius:16px;padding:22px 20px;text-align:left;box-shadow:0 2px 12px rgba(0,0,0,.04);margin-bottom:22px}
+.steps-box h3{font-size:15px;font-weight:800;color:var(--gd);margin-bottom:12px;text-align:center}
+.step-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #f3f4f6;align-items:flex-start}
+.step-item:last-child{border-bottom:none}
+.step-num{width:30px;height:30px;border-radius:50%;background:var(--gl);color:var(--gd);font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-info h4{font-size:14px;font-weight:700;color:var(--dk);margin-bottom:1px}
+.step-info p{font-size:12.5px;color:var(--md);line-height:1.45}
+
+/* TIMER */
+.timer-box{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;border-radius:14px;padding:18px 20px;margin-bottom:22px;text-align:center}
+.timer-box p{font-size:13px;opacity:.85;margin-bottom:8px}
+.timer-box .time{font-size:36px;font-weight:900;color:#fbbf24;font-variant-numeric:tabular-nums;letter-spacing:1px}
+.timer-box .sub{font-size:11.5px;color:#94a3b8;margin-top:4px}
+
+/* BUTTONS */
+.btn-group{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+.btn-wa{display:flex;align-items:center;justify-content:center;gap:8px;background:#25d366;color:#fff;padding:14px 24px;border-radius:50px;font-weight:800;font-size:15px;transition:transform .15s}
+.btn-wa:active{transform:scale(.97)}
+.btn-wa svg{width:22px;fill:#fff}
+.btn-call{display:flex;align-items:center;justify-content:center;gap:8px;background:#fff;color:var(--gd);padding:13px 24px;border-radius:50px;font-weight:800;font-size:14px;border:2px solid var(--gd);transition:all .15s}
+.btn-call:active{transform:scale(.97)}
+.btn-call svg{width:20px;fill:var(--gd)}
+.btn-home{display:inline-block;color:var(--md);font-size:13px;font-weight:600;padding:8px;transition:color .15s}
+.btn-home:hover{color:var(--gd)}
+
+/* OFFER BOX */
+.offer-box{background:linear-gradient(135deg,#fef3c7,#fffbeb);border:2px solid var(--gold);border-radius:14px;padding:18px 20px;margin-bottom:22px;text-align:center}
+.offer-box .tag{display:inline-block;background:var(--gold);color:#fff;padding:3px 12px;border-radius:50px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.offer-box h4{font-size:16px;font-weight:800;color:var(--dk);margin-bottom:4px}
+.offer-box p{font-size:13px;color:var(--md);line-height:1.5}
+.offer-box .price{font-size:22px;font-weight:900;color:var(--r);margin-top:6px}
+.offer-box .old{font-size:14px;color:#9ca3af;text-decoration:line-through;margin-right:6px}
+
+/* TRUST */
+.trust-strip{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.trust-item{display:flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:var(--md);background:#fff;padding:6px 12px;border-radius:50px;border:1px solid #e5e7eb}
+
+/* SOCIAL PROOF */
+.social-proof{background:#fff;border-radius:14px;padding:16px 20px;box-shadow:0 1px 6px rgba(0,0,0,.03);margin-bottom:18px}
+.social-proof h4{font-size:13px;font-weight:800;color:var(--gd);margin-bottom:10px;text-align:center}
+.review{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid #f5f5f5;align-items:flex-start}
+.review:last-child{border-bottom:none}
+.rv-av{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#fff;flex-shrink:0}
+.rv-txt{font-size:12px;color:var(--md);line-height:1.5}
+.rv-name{font-size:11.5px;font-weight:700;color:var(--dk)}
+.rv-stars{color:#f59e0b;font-size:11px}
+
+/* FOOTER */
+.ty-foot{text-align:center;padding:20px 16px;font-size:11px;color:#9ca3af;border-top:1px solid #f3f4f6;background:#fff}
+.ty-foot .brand{font-weight:900;color:var(--gd);font-size:14px;margin-bottom:2px}
+.ty-foot .brand b{color:var(--gold)}
+
+@media(max-width:480px){
+.ty-h{font-size:22px}
+.ty-name{font-size:18px}
+.timer-box .time{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-brand">Veda<b>Vital</b></div></nav>
+
+<main class="ty-hero">
+<!-- Confetti -->
+<div class="confetti" id="confetti"></div>
+
+<div class="ty-card">
+<!-- Success Icon -->
+<div class="success-icon">
+<svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+</div>
+
+<div class="ty-emoji">🎉</div>
+<h1 class="ty-h">धन्यवाद!</h1>
+<p class="ty-name" id="custName">आपका ऑर्डर दर्ज हो गया!</p>
+
+<p class="ty-p">
+आपकी रिक्वेस्ट <strong>सफलतापूर्वक दर्ज</strong> हो गई है।<br>
+हमारी टीम आपको <strong>30 मिनट के अंदर</strong> कॉल करेगी<br>
+और आपका ऑर्डर कन्फ़र्म करेगी।
+</p>
+
+<!-- What happens next -->
+<div class="steps-box">
+<h3>📋 आगे क्या होगा?</h3>
+<div class="step-item">
+<div class="step-num">1</div>
+<div class="step-info"><h4>📞 30 मिनट में कॉल</h4><p>हमारी टीम आपको कॉल करके ऑर्डर डिटेल्स कन्फ़र्म करेगी</p></div>
+</div>
+<div class="step-item">
+<div class="step-num">2</div>
+<div class="step-info"><h4>📦 3-5 दिन में डिलीवरी</h4><p>आपके घर तक फ्री डिलीवरी — Cash on Delivery उपलब्ध</p></div>
+</div>
+<div class="step-item">
+<div class="step-num">3</div>
+<div class="step-info"><h4>👨‍⚕️ फ्री डॉक्टर कंसल्टेशन</h4><p>आयुर्वेदिक डॉक्टर से फ्री डाइट प्लान और गाइडेंस मिलेगी</p></div>
+</div>
+<div class="step-item">
+<div class="step-num">4</div>
+<div class="step-info"><h4>😊 7 दिनों में फ़र्क</h4><p>रोज़ सुबह-शाम 1 चम्मच — 7 दिनों में पेट हल्का महसूस करें!</p></div>
+</div>
+</div>
+
+<!-- Timer -->
+<div class="timer-box">
+<p>⏰ हमारी टीम आपको कॉल करेगी</p>
+<div class="time" id="callTimer">30:00</div>
+<div class="sub">कॉल न आए तो WhatsApp पर संपर्क करें 👇</div>
+</div>
+
+<!-- Buttons -->
+<div class="btn-group">
+<a href="https://wa.me/919999999999?text=🌿 नमस्ते! मैंने अभी PachanVeda GutBalance का ऑर्डर किया है। कृपया कन्फ़र्म करें।" target="_blank" rel="noopener" class="btn-wa">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+WhatsApp पर बात करें
+</a>
+<a href="tel:+919999999999" class="btn-call">
+<svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+कॉल करें: +91 99999-99999
+</a>
+<a href="index.html" class="btn-home">← होम पेज पर वापस जाएँ</a>
+</div>
+
+<!-- Your Order Summary -->
+<div class="offer-box">
+<div class="tag">🎉 आपका ऑर्डर</div>
+<h4>PachanVeda GutBalance — 200gm</h4>
+<p>आयुर्वेदिक डाइजेस्टिव पाउडर<br>फ्री डिलीवरी + फ्री डॉक्टर कंसल्टेशन</p>
+<div class="price"><span class="old">₹2,599</span> ₹999</div>
+</div>
+
+<!-- Trust -->
+<div class="trust-strip">
+<div class="trust-item">🛡️ 100% सुरक्षित</div>
+<div class="trust-item">🚚 फ्री डिलीवरी</div>
+<div class="trust-item">💯 30 दिन मनी बैक</div>
+<div class="trust-item">✅ COD उपलब्ध</div>
+</div>
+
+<!-- Social Proof -->
+<div class="social-proof">
+<h4>⭐ हज़ारों लोगों ने ज़िंदगी बदली</h4>
+<div class="review">
+<div class="rv-av" style="background:linear-gradient(135deg,#166534,#15803d)">रा</div>
+<div><div class="rv-name">राजेश शर्मा <span class="rv-stars">⭐⭐⭐⭐⭐</span></div><div class="rv-txt">"10 दिनों में एसिडिटी ख़त्म! एलोपैथी दवाई बंद कर दी।"</div></div>
+</div>
+<div class="review">
+<div class="rv-av" style="background:linear-gradient(135deg,#d97706,#f59e0b)">प्र</div>
+<div><div class="rv-name">प्रिया गुप्ता <span class="rv-stars">⭐⭐⭐⭐⭐</span></div><div class="rv-txt">"माँ की गैस 1 हफ्ते में कम! सच में कमाल है।"</div></div>
+</div>
+<div class="review">
+<div class="rv-av" style="background:linear-gradient(135deg,#dc2626,#b91c1c)">अ</div>
+<div><div class="rv-name">अमित पटेल <span class="rv-stars">⭐⭐⭐⭐⭐</span></div><div class="rv-txt">"3 साल की कब्ज़ ख़त्म! हर सुबह पेट साफ़।"</div></div>
+</div>
+</div>
+
+</div>
+</main>
+
+<footer class="ty-foot">
+<div class="brand">Veda<b>Vital</b> Herbal</div>
+<p>© 2026 VedaVital Herbal. सर्वाधिकार सुरक्षित।</p>
+</footer>
+
+<script>
+// Get customer name from URL
+const params=new URLSearchParams(window.location.search);
+const name=params.get('name');
+if(name){
+document.getElementById('custName').textContent=name+' जी, आपका ऑर्डर दर्ज हो गया!';
+document.title='धन्यवाद '+name+' जी! — VedaVital';
+}
+
+// 30 minute countdown timer
+(function(){
+let sec=30*60;
+const el=document.getElementById('callTimer');
+function tick(){
+if(sec<=0){el.textContent='कॉल आ रही है...';return}
+const m=Math.floor(sec/60),s=sec%60;
+el.textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+sec--;
+}
+tick();setInterval(tick,1000);
+})();
+
+// Generate confetti
+(function(){
+const c=document.getElementById('confetti');
+const colors=['#dc2626','#15803d','#d97706','#2563eb','#7c3aed','#ec4899','#f59e0b','#06b6d4'];
+for(let i=0;i<40;i++){
+const dot=document.createElement('i');
+dot.style.cssText=`
+left:${Math.random()*100}%;
+width:${6+Math.random()*6}px;
+height:${6+Math.random()*6}px;
+background:${colors[Math.floor(Math.random()*colors.length)]};
+animation-duration:${1.5+Math.random()*2}s;
+animation-delay:${Math.random()*2}s;
+border-radius:${Math.random()>.5?'50%':'2px'};
+`;
+c.appendChild(dot);
+}
+// Remove confetti after 5 seconds
+setTimeout(()=>{c.style.opacity='0';c.style.transition='opacity 1s';setTimeout(()=>c.remove(),1000)},5000);
+})();
+</script>
+</body>
+</html>
